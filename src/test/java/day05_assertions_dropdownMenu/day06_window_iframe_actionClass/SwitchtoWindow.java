@@ -1,4 +1,4 @@
-package day06_window_iframe_actionClass;
+package day05_assertions_dropdownMenu.day06_window_iframe_actionClass;
 
 import org.junit.Assert;
 import org.junit.Test;

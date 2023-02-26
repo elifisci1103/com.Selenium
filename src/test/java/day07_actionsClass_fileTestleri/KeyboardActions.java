@@ -22,7 +22,7 @@ public class KeyboardActions extends TestBase {
         bekle(2);
         WebElement isimKutusu= driver.findElement(By.xpath("//input[@placeholder='First name']"));
         Actions actions= new Actions(driver);
-        Faker faker= new Faker();
+        Faker faker = new Faker();
         String fakeEmailAdress=faker.internet().emailAddress();
         actions.click(isimKutusu)
                 .sendKeys(faker.name().firstName())
