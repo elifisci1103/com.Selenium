@@ -1,4 +1,4 @@
-package explicitlyWait_cookies_webTables;
+package day08_explicitlyWait_cookies_webTables;
 
 import org.junit.Assert;
 import org.junit.Test;
