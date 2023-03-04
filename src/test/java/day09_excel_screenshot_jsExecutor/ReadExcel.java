@@ -23,13 +23,14 @@ public class ReadExcel {
                class'in sonunda kopya workbook'daki bilgileri excel'e kaydederiz.
          */
         // 1- bilgisayardaki excel'e ulasabilmek icin dosyaYolu gerekir
-        String dosyaYolu= "src/test/java/day09_excel_screenshot_jsExecutor/ulkeler.xlsx";
+              String dosyaYolu="src/test/java/day09_excel_screenshot_jsExecutor/ulkeler.xlsx";
         // 2- Dosya yolunu olusturdugumuz excel'den bilgileri almak icin
         //    FileInputStream objesi olusturmaliyiz
         FileInputStream fis = new FileInputStream(dosyaYolu);
+
         // 3- Bilgilerini aldigimiz excel'de calisma yapabilmek icin
         //    kod ortamimizda kopya bir workbook olusturmaliyiz
-        Workbook workbook = WorkbookFactory.create(fis);
+        Workbook workbook= WorkbookFactory.create(fis);
         // Bilgisayarimizdaki excel'in icinde bulunan tum bilgiler
         // artik workbook objesinde kayitli
         // excel'in yapisi geregi, sirayla
@@ -38,12 +39,10 @@ public class ReadExcel {
         // - istenen hucre
         // olusturulmalidir / okunmalidir
         // 12.satirin, 3.hucresinin "Azerbaycan" oldugunu test edin
-        Sheet sayfa1= workbook.getSheet("Sayfa1");
+      String actualData =workbook.getSheet("sayfa1").getRow(11).getCell(2).toString();
+      String expectedData="Azerbaycan";
+      Assert.assertEquals(expectedData,actualData);
         // excel index kullanir yani 0'dan baslar
-        Row row= sayfa1.getRow(11);
-        Cell cell= row.getCell(2);
-        String expectedData="Azerbaycan";
-        String actualData = cell.toString();
-        Assert.assertEquals(expectedData,actualData);
+
     }
 }

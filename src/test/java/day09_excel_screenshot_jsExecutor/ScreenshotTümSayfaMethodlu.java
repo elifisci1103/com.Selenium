@@ -8,7 +8,7 @@ import org.openqa.selenium.WebElement;
 import utilities.ReusableMethods;
 import utilities.TestBase;
 
-public class ReusableMethodTümSayfa  extends TestBase {
+public class ScreenshotTümSayfaMethodlu extends TestBase {
     @Test
     public void test01() {
         // amazon anasayfaya gidin

@@ -28,10 +28,11 @@ public void test01() throws IOException {
     // ve rapora eklenmek icin sonuc yazisi elementinin fotografini cekin
     // 1- fotograf cekilecek elementi locate edin
     // 2- Dosyayi kaydetmek icin bir File olusturun
-    File elementSs = new File("target/elementScreenshot.jpg");
+        File elementScreenshot=new File("target/elementScreenshot.jpg");
     // 3- webelement ile screenshot cekip gecici dosyaya kaydedin
-    File geciciDosya= sonucYaziElementi.getScreenshotAs(OutputType.FILE);
+        File geciciDosya = sonucYaziElementi.getScreenshotAs(OutputType.FILE);
+
     // 4- gecici dosyayi elementSs'e kopyalayalim
-    FileUtils.copyFile(geciciDosya,elementSs);
+        FileUtils.copyFile(geciciDosya,elementScreenshot);
 }
 }
